@@ -1,20 +1,33 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+const getLicenseData = require('./getLicenseData');
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  const {title, description, installation, usage, contributions, tests, license} = data;
 
-`;
+  const {badge: licenseBadge, text: licenseText}  = getLicenseData(license);
+
+  const readmeContent =
+      `${licenseBadge}
+  # ${title}  
+  ## Description  
+  ${description}
+  ## Table of Contents
+  1. [Installation](#Installation)
+  2. [Usage](#Usage)
+  3. [Contributions](#Contributions)
+  4. [Tests](#Tests)
+  ## Installation  
+  ${installation}
+  ## Usage  
+  ${usage}
+  ## Contributions  
+  ${contributions}  
+  ## Tests  
+  ${tests}
+  ## License  
+  ${licenseText}`;
+
+  return readmeContent;
 }
 
 module.exports = generateMarkdown;
