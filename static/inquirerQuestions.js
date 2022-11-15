@@ -86,7 +86,33 @@ const questions = [
             'Attribution',
             'Attribution non-commercial'
         ]
-    }
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your github user URL?',
+        validate: descInput => {
+            if (descInput) {
+                return true;
+            } else {
+                console.log('Please enter a github username url');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email?',
+        validate: descInput => {
+            if (descInput) {
+                return true;
+            } else {
+                console.log('Please enter an email address!');
+                return false;
+            }
+        }
+    },
 ];
 
 module.exports = questions;
