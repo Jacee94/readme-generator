@@ -13,7 +13,7 @@ function generateMarkdown(data) {
   ${description}
   ## Table of Contents
   1. [Installation](#installation)
-  2. [Usage](#Usage)
+  2. [Usage](#usage)
   3. [Contributions](#contributions)
   4. [Test Instructions](#test-instructions)
   5. [License](#license)
