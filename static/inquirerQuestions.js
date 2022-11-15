@@ -72,7 +72,7 @@ const questions = [
             if (descInput) {
                 return true;
             } else {
-                console.log('Please enter a name!');
+                console.log('Please write test instructions!');
                 return false;
             }
         }
